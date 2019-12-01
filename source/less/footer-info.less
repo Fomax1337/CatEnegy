@@ -1,0 +1,127 @@
+@import "variables.less";
+
+.page-footer__info {
+    background-color: @bg-lightgrey;
+}
+
+.page-footer__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-footer__logo-block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.page-footer__logo-link {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.page-footer__logo {
+    width: 128px;
+    height: 24px;
+}
+
+.page-footer__social-block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+}
+
+.page-footer__social  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 140px;
+    padding: 0;
+    margin: 0;
+    padding: 22px 0;
+
+    list-style: none;
+}
+
+.icon--vk {
+    width: 22px;
+    height: 12px;
+}
+
+.icon--inst {
+    width: 16px;
+    height: 16px;
+}
+
+.icon--fb {
+    width: 10px;
+    height: 19px;
+}
+
+.page-footer__copy-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    margin: 0;
+    padding: 0;
+    padding: 22px 0;
+}
+
+.page-footer__copy-sign {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+
+    .page-footer__info .container {
+        padding-top: 0;
+    }
+
+    .page-footer__layout {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .page-footer__logo-block {
+        justify-content: flex-start;
+    }
+
+    .page-footer__social-block {
+        justify-content: flex-start;
+        padding-left: 20px;
+        border:  none;
+    }
+
+    .icon--vk {
+        width: 30px;
+        height: 16px;
+    }
+    
+    .icon--inst {
+        width: 23px;
+        height: 23px;
+    }
+    
+    .icon--fb {
+        width: 14px;
+        height: 28px;
+    }
+
+    .page-footer__copy-link {
+        justify-content: flex-end;
+        width: 190px;
+    }
+
+    .page-footer__copy-img {
+        margin-left: 10px;
+    }
+}

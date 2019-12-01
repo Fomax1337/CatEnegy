@@ -1,0 +1,153 @@
+@import "variables.less";
+
+.feathures__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 60px;
+}
+
+.feathures__title {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.feathures__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    
+    list-style: none;
+}
+
+.feathures__item {
+    display: flex;
+    margin-bottom: 20px;
+
+    align-items: center;
+}
+
+.feathures__item::before {
+    content: "";
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: @bg-green;
+}
+
+.feathures__item--leaf::before {
+    background-image: url(../img/advantage-leaf@1x.png);
+}
+
+.feathures__item--powder::before {
+    background-image: url(../img/advantage-powder@1x.png);
+}
+
+.feathures__item--dining::before {
+    background-image: url(../img/advantage-dining@1x.png);
+}
+
+.feathures__item--clock::before {
+    background-image: url(../img/advantage-clock@1x.png);
+}
+
+.feathures__item-text {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Arial, Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+
+    .feathures {
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .feathures .container {
+        padding: 0;
+    }
+
+    .feathures__title{
+        margin-bottom: 60px;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+
+    .feathures__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 0;
+
+        counter-reset: section;
+       
+    }
+
+    .feathures__item {
+        flex-direction: column;
+        width: 340px;
+        margin-bottom: 70px;
+        align-items: flex-start;
+    }
+
+    .feathures__item::before {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 35px;
+    }
+
+    .feathures__item::after {
+        counter-increment: section;
+        content: counter(section);
+        position: absolute;
+        align-self: center;
+        margin-top: -35px;
+
+        font-size: 280px;
+        line-height: 1;
+        color: #f2f2f2;
+        z-index: -1;
+    }
+
+    .feathures__item-text {
+        width: 250px;
+        padding-bottom: 50px;
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .feathures__title {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .feathures__item {
+        width: 245px;
+    }
+
+    .feathures__item::after {
+        align-self: flex-end;
+    }
+}

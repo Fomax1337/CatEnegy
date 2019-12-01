@@ -1,0 +1,126 @@
+@import "variables.less";
+
+.page-header__intro{
+    position: relative;
+}
+
+.intro__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.intro__title {
+    padding: 0;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.intro__lead {
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.news__to-all {
+    display: block;
+
+    padding: 10px 0;
+
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background-color: #63a73a
+}
+
+@media (min-width: @tablet-width) {
+
+    .intro {
+        background-image: none;
+    }
+
+    .page-header__intro{
+        width: 708px;
+        margin: 0 auto;
+    }
+
+    .intro__container {
+        width: auto;
+        min-height: 800px;
+        justify-content: flex-start;
+        padding-left: 90px; 
+    }
+
+    .intro__title {
+        max-width: 520px;
+        margin-right: 45px;
+        margin-bottom: 35px;
+        padding: 0;
+
+        font-size: 60px;
+        line-height: 60px;
+        color: #111111;
+        text-align: left;
+
+    }
+
+    .intro__lead {
+        margin-bottom: 35px;
+
+        font-size: 20px;
+        line-height: 20px;
+        color: #111111;
+        text-align: left;
+    }
+
+    .intro__img {
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        margin: 0 auto;
+        z-index: -1;
+    }
+
+    .news__to-all {
+        box-sizing: border-box;
+        width: 245px;
+        padding: 16px 27px;
+
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .page-header__intro{
+        width: 1220px;
+        margin: 0 auto;
+    }
+
+    .intro__container{
+        padding-top: 113px;
+        min-height: 550px;
+    }
+
+    .intro__img {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        bottom: inherit;
+        margin: auto;
+        transform: translateX(-34%);
+    }
+}

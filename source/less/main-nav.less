@@ -1,0 +1,81 @@
+@import "variables.less";
+
+.main-nav__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.site-list {
+    display: flex;
+    flex-direction: column; 
+    
+    text-align: center;
+}
+
+.site-list__item {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-top: 23px;
+    padding-bottom: 22px;
+
+    border-top: 1px solid #cfcfcf;
+}
+
+.site-list__item:last-child {
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.site-list__item-link {
+    font-size: 20px;
+    line-height: 20px;
+
+    color: #000000;
+    text-transform: uppercase;
+
+    font-family: "Oswald Medium", sans-serif;
+}
+
+@media (min-width: @tablet-width) {
+    .site-list {
+        flex-direction: row;
+        justify-content: flex-end;  
+        flex-wrap: wrap;
+        width: 516px;
+        margin-top: 11px;
+        margin-right: -20px;
+    }
+
+    .site-list__item {
+        margin: 0;
+        padding: 0;
+        padding: 10px 19px;
+
+        border: none;
+    }
+
+    .site-list__item:last-child {
+        border: none;
+    }
+
+    .site-list__item-link {
+        font-size: 18px;
+        line-height: 25px;
+    
+        color: #000000;
+        text-transform: uppercase;
+    
+        font-family: "Oswald Regular", sans-serif;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .site-list {
+        width: 570px;
+    }
+
+    .site-list__item-link {
+        font-size: 20px;
+        color: #ffffff;
+    }
+}

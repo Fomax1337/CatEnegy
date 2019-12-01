@@ -1,0 +1,139 @@
+@import "variables.less";
+
+.page-header--preview::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    min-height: 306px;
+    width: 100%;
+    background-image: url(../img/index-background-mobile@1x.jpg);
+    background-color: #63a73a;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container { 
+    width: 280px;
+    margin: 0 auto;
+}
+
+.page-header__logo-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 66px;
+}
+
+.page-header__logo {
+    width: 33px;
+}
+
+.main-nav__toggle {
+  width: 36px;
+  height: 25px;
+
+  //background-color: #6a4d38;
+  background-color: transparent;
+
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav__toggle--closed::before {
+  content: "";
+
+  position: absolute;
+  top: 22px;
+  right: 20px;
+
+  width: 36px;
+  height: 2px;
+
+  background-color: #222222;
+  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+}
+
+.main-nav__toggle--opened::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  width: 36px;
+  height: 2px;
+  background-color: #000000;
+}
+
+ .main-nav--closed {
+   display: none;
+ }
+
+ .main-nav--nojs {
+   display: block;
+ }
+
+@media (min-width: @tablet-width) {
+
+    .page-header--preview::after {
+        display: none;
+    }
+
+    .container {
+        width: 708px;
+        padding-top: 24px;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .page-header__logo-block {
+        padding: 0;
+    }
+
+    .page-header__logo-link{
+        display: block;
+        width: 192px;
+    }
+
+    .page-header__logo {
+        width: 100%;
+    }
+
+    .page-header__logo-sign {
+        display: none;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .container {
+        width: 1220px;
+        padding-top: 53px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .page-header--preview::after {display: block;
+        width: 50%;
+        min-height: 696px;
+        top: 0;
+        right: 0;
+        left: inherit;
+        background-image: url(../img/index-background-desktop@1x.jpg);
+        background-color: #63a73a;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+}
+
